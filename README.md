@@ -6,6 +6,13 @@
 
 This library provides an object-oriented interface to get information out of dnf/yum repositories.
 
+## Update 2023-07-04
+
+This copy of the code contains updates from the following unmerged PRs
+
+- [#16 Add checksum properties (@sy-base)](https://github.com/carlwgeorge/repomd/pull/16)
+- [#13 Add package weight (size) properties](https://github.com/carlwgeorge/repomd/pull/13)
+
 ## Usage
 
 ```python
