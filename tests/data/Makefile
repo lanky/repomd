@@ -1,11 +1,14 @@
 RPMS := $(addsuffix .rpm,brisket chicken ribs sausage)
+TOPDIR := $(shell pwd)/rpmbuild
+DIST := .fc27
 
 all: repo empty_repo
 
 %.rpm:
-	@rpmbuild --define "_topdir $(shell pwd)" --define "vendor Carl's BBQ" --define "packager Carl" -bb $(basename $@).spec
-	@mv RPMS/noarch/*.rpm .
-	@rm -r BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
+	@mkdir $(TOPDIR)
+	@rpmbuild --define "_topdir $(TOPDIR)" --define "dist $(DIST)" --define "vendor Carl's BBQ" --define "packager Carl" -bb $(basename $@).spec
+	@mv $(TOPDIR)/RPMS/noarch/*.rpm .
+	@[ -d $(TOPDIR) ] && rm -r $(TOPDIR)
 
 repo: $(RPMS)
 	@mkdir repo
