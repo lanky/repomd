@@ -110,7 +110,7 @@ def test_package(chicken):
     assert chicken.evr == '2.2.10-1.fc27'
     assert chicken.nevr == 'chicken-2.2.10-1.fc27'
     assert chicken.nevra == 'chicken-2.2.10-1.fc27.noarch'
-    assert chicken.package_size == 6769
+    assert chicken.package_size == 6568
     assert chicken.installed_size == 39
     assert chicken.archive_size == 292
 
@@ -141,7 +141,7 @@ def test_package_with_epoch(brisket):
     assert brisket.evr == '1:5.1.1-1.fc27'
     assert brisket.nevr == 'brisket-1:5.1.1-1.fc27'
     assert brisket.nevra == 'brisket-1:5.1.1-1.fc27.noarch'
-    assert brisket.package_size == 6788
+    assert brisket.package_size == 6584
     assert brisket.installed_size == 39
     assert brisket.archive_size == 292
 
@@ -168,7 +168,7 @@ def test_subpackage(pork_ribs):
     assert pork_ribs.evr == '3.2.0-1.fc27'
     assert pork_ribs.nevr == 'pork-ribs-3.2.0-1.fc27'
     assert pork_ribs.nevra == 'pork-ribs-3.2.0-1.fc27.noarch'
-    assert pork_ribs.package_size == 6774
+    assert pork_ribs.package_size == 6572
     assert pork_ribs.installed_size == 41
     assert pork_ribs.archive_size == 300
 
